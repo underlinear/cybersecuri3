@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="Cybersecuritree" content="SCHOO!">
+	<title>Retro Pen | SCHOO!</title>
+	<style>
+		* {
+			padding: 0;
+			margin: 0;
+		}
+
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #FAFAFA;
+		}
+
+		.wrapper {
+			background-size: cover;
+			height: 100vh;
+		}
+
+		.top_nav {
+			display: flex;
+			height: 30px;
+			background-color: #FAFAFA;
+			position: relative;
+		}
+
+		.right {
+			position: absolute;
+			right: 0;
+		}
+
+		.top_nav ul {
+			margin-top: 5px;
+			display: flex;
+			margin-right: 5vw;
+		}
+
+		.top_nav ul li {
+			list-style: none;
+			margin: 0 2px;
+		}
+
+		.top_nav ul li a {
+			text-decoration: none;
+			color: black;
+			font-size: 15px;
+			padding: 6px 20px;
+			font-family: 'Roboto', sans-serif;
+			transition: .4s;
+		}
+
+
+		.logo img {
+			margin-left: 15vw;
+			width: 80px;
+		}
+
+		.Cart img {
+			width: 25px;
+			height: 30px;
+			margin-top: 30px;
+			margin-left: 165px;
+		}
+
+
+		.bottom_nav {
+			background-color: white;
+		}
+
+		.bottom_nav ul {
+			margin: auto;
+			margin-left: -5vw;
+			text-align: center;
+			display: flex;
+			justify-content: center;
+			list-style: none;
+		}
+
+		.bottom_nav ul li {
+			margin-bottom: 5px;
+
+		}
+
+		.bottom_nav ul li a {
+			text-decoration: none;
+			color: black;
+			font-size: 17px;
+			padding: 6px 30px;
+			font-family: 'Roboto', sans-serif;
+			transition: .4s;
+		}
+
+		.search_wrap {
+			margin-top: 20px;
+			text-align: center;
+		}
+
+		.search_wrap .search_box {
+			margin-left: 70px;
+			position: relative;
+			width: 650px;
+			height: 20px;
+		}
+
+		.search_wrap .search_box .input {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			padding: 10px 20px;
+			border-radius: 3px;
+			font-size: 18px;
+		}
+
+		.search_wrap .search_box .btn {
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 20px;
+			height: 100%;
+			z-index: 1;
+			cursor: pointer;
+		}
+
+		.search_wrap .search_box .btn.btn_common img {
+			margin-left: 15px;
+			margin-top: 12px;
+			width: 20px;
+
+		}
+
+
+		.search_wrap .search_box .btn.btn_common .fas {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			color: white;
+			font-size: 20px;
+		}
+
+		.search_wrap.search_wrap_2 .search_box .input {
+			border-radius: 10px;
+		}
+
+
+
+		.search_wrap.search_wrap_2 .search_box .btn {
+			left: 0;
+			border-top-left-radius: 3px;
+			border-bottom-left-radius: 3px;
+		}
+
+		.search_wrap.search_wrap_2 .search_box .input {
+			padding-left: 50px;
+		}
+
+
+
+
+		footer {
+			background-color: #F2F2F2;
+			color: black;
+			position: absolute;
+			bottom: -35vh;
+			width: 100%;
+		}
+
+		.container {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		.About {
+			flex-grow: 1;
+			flex-basis: 0;
+			padding: 20px;
+			margin-left: 140px;
+		}
+
+		.Services {
+			flex-grow: 1;
+			flex-basis: 0;
+			padding: 20px;
+			margin-left: -100px;
+		}
+
+		.Subscribe {
+			flex-grow: 1;
+			flex-basis: 0;
+			padding: 20px;
+			display: flex;
+			flex-direction: column;
+			margin-left: -100px;
+		}
+
+		.subscribe {
+			padding: 10px 50px;
+			border: none;
+			border-radius: 2px;
+			background-color: #D1D1D4;
+			color: white;
+			font-size: 15px;
+			letter-spacing: 1px;
+			cursor: pointer;
+		}
+
+		.Subscribe input {
+			padding: 10px;
+			border: none;
+			border-radius: 2px;
+			margin-bottom: 10px;
+		}
+
+		section{
+			padding: 10px;
+			background-color: #C1C1C4;
+			color: white;
+			display: flex;
+		}
+
+		section a {
+			color:white;
+		}
+
+		.Subscribe input[type="text"] {
+			width: 250px;
+			height: 25px;
+		}
+
+		.Subscribe button {
+			width: 270px;
+			height: 45px;
+		}
+
+		.logo {
+			display: flex;
+			margin-left: -12px;
+		}
+
+
+		.addtocart {
+			margin: 0 auto;
+			margin-top: -70vh;
+			font-family: Roboto, sans-serif;
+			background-color: #FAFAFA;
+		}
+
+		.addtocart .boxes {
+			height: 50vh;
+			display: flex;
+			justify-content: center;
+			margin: auto;
+		}
+
+		.boxes #item1 {
+			background-color: white;
+			width: 20vw;
+			display: flex;
+			justify-content: center;
+			align-items: top;
+			margin: 0;
+		}
+
+		#item1 img {
+			width: 90%;
+			height: 90%;
+			object-fit: contain;
+		}
+
+
+		.boxes #item2 {
+			background-color: white;
+			width: 30vw;
+		}
+
+		#item2 h3 {
+			font-weight: normal;
+		}
+
+		.inlinetext {
+			font-size: 12.5px;
+			font-weight: 600;
+			margin-top: 32px;
+		}
+
+		#item2 hr {
+			width: 80%;
+			color: #C1C1C4;
+		}
+
+		.productquality {
+			display: flex;
+			align-items: flex-start;
+			font-size: 15px;
+		}
+
+		.productquality img {
+			height: 30px;
+			width: 30px;
+		}
+
+		#buyoraddtocart {
+			margin-top: 15px;
+		}
+
+		.boxes #item3 {
+			background-color: #F2F2F2;
+			width: 15vw;
+		}
+
+		#item2 button {
+			border: none;
+			font-weight: bold;
+			cursor: pointer;
+			padding: 10px 10px;
+		}
+
+		#buynow {
+			background-color: #FFDE57;
+			padding: 15px 50px;
+			color: black;
+			text-decoration: none;
+		}
+
+		#cart {
+			background-color: #FF6201;
+			padding: 15px 46px;
+			color: black;
+			text-decoration: none;
+
+		}
+
+		#item3 p {
+			margin-left: 12px;
+			margin-right: 12px;
+			font-size: 16px;
+		}
+
+		#item3 hr {
+			height: 10px;
+			background-color: white;
+			border: none;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="top_nav">
+			<div class="right">
+				<ul>
+					<li><b><a href="../../../Sign-up.html">Sign up</a></b></li>
+					<li>
+						<p>|</p>
+					</li>
+					<li><b><a href="../../../log-in.html">Log in</a></b></li>
+				</ul>
+			</div>
+		</div>
+		<div class="bottom_nav">
+			<div class="logo">
+				<img src="https://imgur.com/GJo6Vx7.png" alt="Web logo">
+				<div style="margin-top:30px; font-size: 30px; margin-left: 3px;">
+					<p><span>SCHOO!</span></p>
+				</div>
+				<div class="search_wrap search_wrap_2">
+					<div class="search_box">
+						<div class="btn btn_common">
+							<img src="https://cdn.onlinewebfonts.com/svg/img_588.png" alt="search Logo">
+						</div>
+						<input type="text" class="input" placeholder="search...">
+					</div>
+				</div>
+				<div class="Cart">
+					<a href="../../../addtocart.html"><img src="https://cdn-icons-png.flaticon.com/512/711/711897.png"
+							alt="shopping cart"></a>
+				</div>
+			</div>
+			<ul>
+				<li><b><a href="../../../home.html">Home</a></b></li>
+				<li><b><a href="../../../about.html">About</a></b></li>
+				<li><b><a href="../../WritingInstrumentsShop.html">Shop</a></b></li>
+				<li><b><a href="../../WritingInstrumentsSale.html">Sale</a></b></li>
+				<li><b><a href="../../../contact.html">Contact</a></b></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="addtocart">
+		<div class="boxes">
+			<div id="item1">
+				<img src="images/product4.jpeg" alt="product">
+			</div>
+			<div id="item2">
+				<h3>Retro Pen</h3>
+				<div class="inlinetext">
+					<p style="color:#C1C1C4;">Brand: No brand
+						<span style="color:black;">|</span>
+						<a href="../../WritingInstrumentsShop.html" style=" color: #FF2A00; ">
+							<span>See more product from Writing Instruments</span>
+						</a>
+					</p>
+				</div>
+				<hr>
+				<p style=" color: #FF2A00; font-size:23.3px;margin-top:15px;">₱ 30</p><br>
+				<p style=" color: #C1C1C4; font-size:15px; text-decoration: line-through;">₱ 40</p>
+				<hr>
+				<div class="productquality">
+					<div>
+						<p style=" color: #C1C1C4;margin-top:15px;">Qty</p>
+					</div>
+					<div style="margin-left:20px; margin-top:15px;">
+						<p style="color: black;">Product Quality
+							<br><img src="https://www.iconpacks.net/icons/2/free-quality-icon-3601-thumb.png"
+								alt="verified">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img
+								src="https://cdn-icons-png.flaticon.com/512/3891/3891808.png" alt="trophy">
+						</p>
+					</div>
+				</div>
+				<p style="color: #C1C1C4;margin-top:15px;"> Quantity&nbsp;&nbsp;&nbsp;<button
+						type="button">–</button>&nbsp;&nbsp;&nbsp;<span
+						style="color:black">1</span>&nbsp;&nbsp;&nbsp;<button type="button">+</button><br><br></p>
+				<div id="buyoraddtocart">
+					<a href="../getyourorderform.html" id="buynow">Buy Now</a>
+					<a href="../../addtocart.html" id="cart">Add to Cart</a>
+				</div>
+			</div>
+			<div id="item3">
+				<p style="font-weight:bold;margin-top:15px;">Delivery Options</p>
+				<p><img src="https://cdn-icons-png.flaticon.com/512/67/67347.png" alt="locationicon"
+						style="width:25px;height:25px;float:left;">&nbsp;&nbsp;&nbsp;Metro Manila, <br>
+					&nbsp;&nbsp;&nbsp;Quezon City<br></p>
+				<p style="font-weight:bold;margin-top:15px;">Standard Delivery</p>
+				<p style="margin-top:15px;"><img src="https://imgur.com/TOc9LAY.png" alt="locationicon"
+						style="width:25px;height:25px;float:left;">&nbsp;&nbsp;&nbsp;Get by 1-3 days.</p>
+				<hr style="margin-top:15px;">
+				<p><br><br><img src="https://imgur.com/KlrNQ7L.png" alt="locationicon"
+						style="width:25px;height:25px;float:left;">&nbsp;&nbsp;&nbsp;7 Days Money Back<br>
+					&nbsp;&nbsp;&nbsp;Guarantee<br><br></p>
+				<p><img src="https://icons.veryicon.com/png/o/miscellaneous/template-3/free-warranty.png"
+						alt="locationicon" style="width:25px;height:25px;float:left;">&nbsp;&nbsp;&nbsp;Warranty Not
+					<br>&nbsp;&nbsp;&nbsp;Available</p>
+			</div>
+		</div>
+	</div>
+	<footer>
+		<div class="container">
+			<div class="About">
+				<h4>About us</h4><br>
+				<p style="color:#C1C1C4; font-size: 12px;">SCHOO! is an e-commerce website dedicated to <br>
+					providing quality school supplies with reasonable<br>
+					prices.</p> <br>
+				<h4> Contact us</h4><br>
+				<img style="width: 12px; margin-right: 5px;"
+					src="http://pluspng.com/img-png/phone-png-phone-png-file-1969.png" alt="Call Logo">
+				<span style="color:#C1C1C4; font-size:12px;">+63 9270050401</span> <br>
+				<img style="width: 15px; margin-right: 5px;"
+					src="https://logos-world.net/wp-content/uploads/2020/11/Gmail-Logo-2013-2020.png" alt="gmail Logo">
+				<span style="color:#C1C1C4; font-size:12px;">Cybersecurithree@gmail.com</span>
+
+			</div>
+
+			<div class="Services">
+				<h4>Our Services</h4><br>
+				<p style="color:#C1C1C4; font-size: 12px;">School supply management <br>
+					Online transaction processing<br>
+					Local trade <br><br>
+
+					When shopping for school supplies, be sure to <br>
+					compare prices and read customer reviews to <br>
+					ensure you are getting the best deal on high-<br>
+					quality products.</p>
+			</div>
+
+			<div class="Subscribe">
+				<h4>Subscribe us</h4><br>
+				<input type="text" placeholder="Enter your email">
+				<button id="subscribe" class="subscribe">
+					Subscribe
+				</button>
+
+
+				<div class="logo">
+					<a href="https://www.facebook.com"><img style="width: 30px; margin: 15px;"
+							src="https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-facebook-circle-512.png"
+							alt="facebook Logo"></a>
+					<a href="https://www.twitter.com"><img style="width: 30px; margin: 15px;"
+							src="https://www.freeiconspng.com/uploads/logo-twitter-circle-png-transparent-image-1.png"
+							alt="twitter Logo"></a>
+					<a href="https://www.instagram.com"><img style="width: 30px; margin: 15px;"
+							src="https://www.montessoriivyleague.com/wp-content/uploads/2018/10/instagram-logo-circle.png"
+							alt="instagram Logo"></a>
+					<a href="https://telegram.org"><img style="width: 30px; margin: 15px;"
+							src="https://pnggrid.com/wp-content/uploads/2021/04/telegram-logo-circle-768x768.png"
+							alt="telegram Logo"></a>
+					<a href="https://www.youtube.com"><img style="width: 30px; margin: 15px;"
+							src="https://pnggrid.com/wp-content/uploads/2021/05/Youtube-Logo-Cicle-1024x1024.png"
+							alt="youtube logo"></a>
+
+				</div>
+
+
+			</div>
+		</div>
+
+		<section>
+			<strong style="margin-left:150px;">&copy; 2023</strong>&nbsp; SCHOO!. &ensp;<b> All rights reserved.</b>
+			<span style="margin-left: auto;">
+				<b style="margin-right:240px;"><a href="priv.html">Privacy policy </a>&ensp; <a href="terms.html">Terms
+						&amp; condition</a></b>
+			</span>
+		</section>
+	</footer>
+</body>
