@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="Arcadio R. Flocarencia Jr." content="Group 3">
+    <title>Design</title>
+    <style>
+	
+        * {
+            padding: 0;
+            margin: 0;
+        }
+		
+		body {
+            font-family: Arial, sans-serif;
+            background-color: #FAFAFA;
+        }
+		
+		.wrapper {
+			background-size: cover;
+			height: 100vh;
+		}
+		
+		.top_nav {
+			display: flex;
+			height: 30px;
+			background-color: #FAFAFA;
+			position: relative;
+		}
+
+		.right {
+			position: absolute; 
+			right: 0; 
+		}
+
+		.top_nav ul {
+		    margin-top: 5px;
+			display: flex;
+			margin-right: 5vw;
+		}
+
+		.top_nav ul li {
+			list-style: none;
+			margin: 0 2px;
+		}
+
+		.top_nav ul li a {
+			text-decoration: none;
+			color: black;
+			font-size: 15px;
+			padding: 6px 20px;
+			font-family: 'Roboto', sans-serif;
+			transition: .4s;
+		}
+		
+		
+		.logo img {
+            margin-left: 10vw;
+            width: 80px;
+        }
+		
+		.Cart img{
+		width: 25px;
+		height: 30px;
+		margin-top:30px;
+		margin-left: 165px;
+		}
+		
+		
+        .bottom_nav {
+  			background-color: white;
+         }
+
+        .bottom_nav ul {
+		    margin: auto;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+
+        .bottom_nav ul li {
+		    margin-bottom: 5px;
+
+        }
+
+        .bottom_nav ul li a {
+            text-decoration: none;
+            color: black;
+            font-size: 17px;
+            padding: 6px 30px;
+            font-family: 'Roboto', sans-serif;
+            transition: .4s;
+        }
+		
+.search_wrap{
+    margin-top: 20px;
+	text-align: center;
+}
+
+.search_wrap .search_box{
+    margin-left: 70px;
+	position: relative;
+	width: 40vw;
+	height: 20px;
+}
+
+.search_wrap .search_box .input{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	padding: 10px 20px;
+	border-radius: 3px;
+	font-size: 18px;
+}
+
+.search_wrap .search_box .btn{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 20px;
+	height: 100%;
+	z-index: 1;
+	cursor: pointer;
+}
+
+.search_wrap .search_box .btn.btn_common img{
+margin-left: 15px;
+margin-top:12px;
+width: 20px;
+
+}
+
+
+.search_wrap .search_box .btn.btn_common .fas{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	color: white;
+	font-size: 20px;
+}
+
+.search_wrap.search_wrap_2 .search_box .input{
+	border-radius: 10px;
+}
+
+
+
+.search_wrap.search_wrap_2 .search_box .btn{
+	left: 0;
+	border-top-left-radius: 3px;
+	border-bottom-left-radius: 3px;
+}
+
+.search_wrap.search_wrap_2 .search_box .input{
+	padding-left: 50px;
+}
+		
+
+
+.slider-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.slider {
+    width: 100%;
+    max-width: 50vw;
+    height: 300px;
+    margin:0 auto;
+    margin-top: -110vh;
+    margin-left: 10vw;
+    overflow: hidden;
+    position: relative;
+}
+.slides {
+    display: flex;
+    overflow-x: scroll;
+    position: relative;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+}
+.slide:nth-of-type(even) {
+    background-color: rgb(250, 246, 212);
+}
+
+.slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    width: 100%;
+    height: 400px;
+    margin-right: 0px;
+    box-sizing: border-box;
+    background: white;
+    transform-origin: center center;
+    transform: scale(1);
+    scroll-snap-align: center;
+}
+
+.slide__text {
+    font-size: 40px;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+.slide a {
+    background: none;
+    border: none;
+}
+
+a.slide__prev,
+.slider::before {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    left: 5%;
+}
+
+a.slide__next,
+.slider::after {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    right: 5%;
+}
+
+.slider::before,
+.slider::after,
+.slide__prev,
+.slide__next {
+    position: absolute;
+    top: 48%;
+    width: 35px;
+    height: 35px;
+    border: solid black;
+    border-width: 0 4px 4px 0;
+    padding: 3px;
+    box-sizing: border-box;
+}
+
+.slider::before,
+.slider::after {
+  content: '';
+  z-index: 1;
+  background: none;
+  pointer-events: none;
+}
+
+.slider__nav {
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    width: 200px;
+    margin-left: -100px;
+    text-align: center;
+}
+
+
+.slider__navlink {
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: #C1C1C4;
+    margin: 0 10px 0 10px;
+	
+	
+}
+.read-article{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 999;
+  color: #000;
+  background: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-family: arial;
+  text-decoration: none;
+  box-shadow: rgb(50 50 93 / 25%) 0 0 100px -20px, rgb(0 0 0 / 30%) 0 0 60px -15px;
+}
+.read-article:hover{
+    background: #d5d5d5;
+    box-shadow: rgb(50 50 93 / 25%) 0 0 100px -20px, rgb(0 0 0 / 30%) 0 0 60px 0px;
+}
+iframe[sandbox] .read-article{
+  display: none;
+}
+
+
+
+
+		
+        footer {  
+			background-color: #F2F2F2;
+			color: black;
+			position: absolute;
+			bottom: -20vh;
+			width: 100%;
+        }
+        
+        .container {
+			display: flex;
+			justify-content: space-between;
+        }
+
+        .About {
+			flex-grow: 1;
+			flex-basis: 0;
+			padding: 20px;
+			margin-left: 140px ;
+        }
+
+        .Services {
+			flex-grow: 1;
+			flex-basis: 0;
+			padding: 20px;
+			margin-left: -100px;
+        }
+
+        .Subscribe {
+			flex-grow: 1;
+			flex-basis: 0;
+			padding: 20px;
+			display: flex;
+			flex-direction: column;
+			margin-left: -100px;
+        }
+
+        .subscribe {
+			padding: 10px 50px;
+			border: none;
+			border-radius: 2px;
+			background-color: #D1D1D4;
+			color: white;
+			font-size: 15px;
+			letter-spacing: 1px;
+			cursor: pointer;
+        }
+
+        .Subscribe input {
+            padding: 10px;
+            border: none;
+            border-radius: 2px;
+            margin-bottom: 10px;
+        }
+
+        section {
+            padding: 10px;
+			background-color: #C1C1C4;
+			color: white;
+			display: flex;
+
+
+
+        }
+		
+		.Subscribe input[type="text"] {
+            width: 250px;
+            height: 25px;
+        }
+
+        .Subscribe button {
+            width: 270px;
+            height: 45px;
+        }
+		
+		.logo {
+            display: flex;
+            margin-left: -12px;
+        }
+		
+		
+		
+
+    </style>
+</head>
+<body>
+<div class="wrapper">
+  <div class="top_nav">
+    <div class="right">
+      <ul>
+        <li><b><a href="Sign-up.html">Sign up</a></b></li>
+        <li><p>|</p></li>
+        <li><b><a href="log-in.html">Log in</a></b></li>
+      </ul>
+    </div>
+  </div>
+  <div class="bottom_nav">
+    <div class="logo">
+      <img src="https://imgur.com/GJo6Vx7.png" alt="Web logo">
+      <div style="margin-top:30px; font-size: 30px; margin-left: 3px;">
+        <p><span>SCHOO!</span></p>
+      </div>
+      <div class="search_wrap search_wrap_2">
+        <div class="search_box">
+          <div class="btn btn_common">
+            <img src="https://cdn.onlinewebfonts.com/svg/img_588.png" alt="search Logo">
+          </div>
+          <input type="text" class="input" placeholder="search...">
+        </div>
+      </div>
+      <div class="Cart">
+        <a href="addtocart.html"><img src="https://cdn-icons-png.flaticon.com/512/711/711897.png" alt="shopping cart"></a>
+      </div>
+    </div>
+    <ul>
+      <li><b><a href="home.html">Home</a></b></li>
+      <li><b><a href="About.html">About</a></b></li>
+      <li><b><a href="Shop/WritingInstrumentsShop.html">Shop</a></b></li>
+      <li><b><a href="Shop/WritingInstrumentsSale.html">Sale</a></b></li>
+      <li><b><a href="contact.html">Contact</a></b></li>
+    </ul>
+  </div>
+</div>
+
+
+<div class="slider-container">
+  <div class="slider">
+    <div class="slides">
+      <div id="slides__1" class="slide">
+        <span class="slide__text">1</span>
+        <a class="slide__prev" href="#slides__3" title="Next"></a>
+        <a class="slide__next" href="#slides__2" title="Next"></a>
+      </div>
+      <div id="slides__2" class="slide">
+        <span class="slide__text">2</span>
+        <a class="slide__prev" href="#slides__1" title="Prev"></a>
+        <a class="slide__next" href="#slides__3" title="Next"></a>
+      </div>
+      <div id="slides__3" class="slide">
+        <span class="slide__text">3</span>
+        <a class="slide__prev" href="#slides__2" title="Prev"></a>
+        <a class="slide__next" href="#slides__3" title="Next"></a>
+      </div>
+	
+    </div>
+    <div class="slider__nav">
+        <a class="slider__navlink" href="#slides__1"></a>
+        <a class="slider__navlink" href="#slides__2"></a>
+        <a class="slider__navlink" href="#slides__3"></a>
+    </div>
+	
+  </div>
+</div>
+
+<div style="float: right; margin-top: -79vh; margin-right: 20vw; ">
+  <img style="width: 250px; height: 115px;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1F1gol9KwLuiaVbx_6xxr7HQDPPRYktJj9A&usqp=CAU" alt="Example Image"><br><br>
+   <img style="width: 250px; height: 115px;" src="https://image.freepik.com/free-vector/sale-coupon-promote-marketing-template-banner-special-offer-discount-up-50-off_41472-41.jpg" alt="Example Image"><br><br>
+    <img style="width: 250px; height: 115px;" src="https://img.freepik.com/free-vector/new-arrival-modern-red-banner-design_1017-36760.jpg" alt="Example Image">
+</div>
+
+
+
+
+
+
+<footer>
+    <div class="container">
+        <div class="About">
+            <h4>About us</h4><br>
+            <p style="color:#C1C1C4; font-size: 12px;">SCHOO! is an e-commerce website dedicated to <br>
+                providing quality school supplies with reasonable<br>
+                prices.</p> <br>
+			<h4> Contact us</h4><br>
+    <img style="width: 12px; margin-right: 5px;" src="http://pluspng.com/img-png/phone-png-phone-png-file-1969.png" alt="Call Logo">
+    <span style="color:#C1C1C4; font-size:12px;">+63 9270050401</span>	<br>	
+	<img style="width: 15px; margin-right: 5px;" src="https://logos-world.net/wp-content/uploads/2020/11/Gmail-Logo-2013-2020.png" alt="gmail Logo">
+    <span style="color:#C1C1C4; font-size:12px;">Cybersecurithree@gmail.com</span>		
+			
+        </div>
+
+        <div class="Services">
+            <h4>Our Services</h4><br>
+            <p style="color:#C1C1C4; font-size: 12px;">School supply management <br>
+                Online transaction processing<br>
+                Local trade <br><br>
+
+                When shopping for school supplies, be sure to <br>
+                compare prices and read customer reviews to <br>
+                ensure you are getting the best deal on high-<br>
+                quality products.</p>
+        </div>
+
+        <div class="Subscribe">
+            <h4>Subscribe us</h4><br>
+            <input type="text" placeholder="Enter your email">
+            <button id="subscribe" class="subscribe">
+                Subscribe
+            </button>
+			
+		
+            <div class="logo">
+              <a href="https://www.facebook.com"><img style="width: 30px; margin: 15px;"
+                  src="https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-facebook-circle-512.png"
+                  alt="facebook Logo"></a>
+              <a href="https://www.twitter.com"><img style="width: 30px; margin: 15px;"
+                  src="https://www.freeiconspng.com/uploads/logo-twitter-circle-png-transparent-image-1.png"
+                  alt="twitter Logo"></a>
+              <a href="https://www.instagram.com"><img style="width: 30px; margin: 15px;"
+                  src="https://www.montessoriivyleague.com/wp-content/uploads/2018/10/instagram-logo-circle.png"
+                  alt="instagram Logo"></a>
+              <a href="https://telegram.org"><img style="width: 30px; margin: 15px;"
+                  src="https://pnggrid.com/wp-content/uploads/2021/04/telegram-logo-circle-768x768.png"
+                  alt="telegram Logo"></a>
+              <a href="https://www.youtube.com"><img style="width: 30px; margin: 15px;"
+                  src="https://pnggrid.com/wp-content/uploads/2021/05/Youtube-Logo-Cicle-1024x1024.png"
+                  alt="youtube logo"></a>
+    
+            </div>
+    
+    
+          </div>
+        </div>
+    
+        <section>
+          <strong style="margin-left:150px;">&copy; 2023</strong>&nbsp; SCHOO!. &ensp;<b> All rights reserved.</b>
+          <span style="margin-left: auto;">
+            <b style="margin-right:240px;"><a href="priv.html">Privacy policy </a>&ensp; <a href="terms.html">Terms
+                &amp; condition</a></b>
+          </span>
+        </section>
+</footer>
+</body>
+</html>

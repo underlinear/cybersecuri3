@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="Cybersecuritree" content="SCHOO!">
+	<title>New Text Document</title>
+	<style>
+	* {
+            padding: 0;
+            margin: 0;
+        }
+		
+		body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+        }
+		
+		.wrapper {
+			background-size: cover;
+			height: 100vh;
+		}
+		
+	        .login_nav{
+			display: flex;
+			height: auto;
+			background-color: #FAFAFA;
+			position: relative;
+		}
+			
+		.logo img {
+            margin-left: 5vw;
+            margin-top: 10px;
+            width: 80px;
+        }
+		
+		fieldset {
+		    display: flex;
+			width: 20vw;
+			height: 50vh;
+			margin: 0 auto;
+			border: 1px solid  white;
+			padding: 10px;
+		}
+		
+		.loginform { 
+		       display: flex;
+			   align-items: center;
+			   margin-top: 10vh;
+			   
+		}
+		
+		.loginform img{
+		width: 500px; 
+		margin-left:10vw;
+
+		}
+		        footer {  
+			background-color: #F2F2F2;
+			color: black;
+			position: absolute;
+			bottom: -35vh;
+			width: 100%;
+        }
+        
+        .container {
+			display: flex;
+			justify-content: space-between;
+        }
+
+        .About {
+			flex-grow: 1;
+			flex-basis: 0;
+			padding: 20px;
+			margin-left: 140px ;
+        }
+
+        .Services {
+			flex-grow: 1;
+			flex-basis: 0;
+			padding: 20px;
+			margin-left: -100px;
+        }
+
+        .Subscribe {
+			flex-grow: 1;
+			flex-basis: 0;
+			padding: 20px;
+			display: flex;
+			flex-direction: column;
+			margin-left: -100px;
+        }
+
+        .subscribe {
+			padding: 10px 50px;
+			border: none;
+			border-radius: 2px;
+			background-color: #D1D1D4;
+			color: white;
+			font-size: 15px;
+			letter-spacing: 1px;
+			cursor: pointer;
+        }
+
+        .Subscribe input {
+            padding: 10px;
+            border: none;
+            border-radius: 2px;
+            margin-bottom: 10px;
+        }
+
+        section {
+            padding: 10px;
+			background-color: #C1C1C4;
+			color: white;
+			display: flex;
+
+
+
+        }
+		
+		.Subscribe input[type="text"] {
+            width: 250px;
+            height: 25px;
+        }
+
+        .Subscribe button {
+            width: 270px;
+            height: 45px;
+        }
+		
+		.logo {
+            display: flex;
+            margin-left: -12px;
+        }
+		
+
+	
+	</style>
+</head>
+<body>
+
+	<div class= "login_nav">
+        <div class="logo">
+            <a href="home.html"><img src="https://imgur.com/GJo6Vx7.png" alt="Web logo"></a>
+            <span style="color: #C1C1C4; font-size: 25px; margin-top:30px; margin-left:10px;">Sign-up</span>
+
+        </div>
+    </div>
+	
+	<div class="loginform">
+	<img src="https://imgur.com/6gRVzqE.png" alt="3logs">
+      <fieldset>
+	  <form>
+       <h2 style = "text-align: center; margin-top: 20px;">Sign Up</h2><br>
+	   <p style="text-align: center;">It's free and only takes a minute</p><br>
+	   <p>First Name:
+       <input style= "height: 20px; width: 300px; border: 2px solid  black; 	border-radius: 3px;" type="text" name="Last Name" 
+required="required" />
+       </p>
+	   <p>Last Name:
+       <input style= "height: 20px; width: 300px; border: 2px solid  black; 	border-radius: 3px;" type="text" name="Last Name" 
+required="required" />
+       </p>
+	   <label for="Email">Email:</label><br>
+<input style= "height: 20px; width: 300px; border: 2px solid  black; 	border-radius: 3px;" type="text" name="Email" 
+required="required" /><br>
+<label for="password">Password:</label><br>
+<input style= "height: 20px; width: 300px; border: 2px solid  black; 	border-radius: 3px;" type="password" name="password"
+required="required" /><br>
+
+<label for="Confirm Password:"> Confirm Password:</label><br>
+<input style= "height: 20px; width: 300px; border: 2px solid  black; 	border-radius: 3px;" type="password" name="Confirm Password"
+required="required" /><br><br>
+
+<a href="home.html"><input style= "height: 30px; width: 300px; border: 0px; border-radius: 3px; text-align: center; color: white; background-color: #4AC1A3; font-size: 17px;" type="submit" value="Submit" /></a><br><br>
+
+ <p>By clicking the Sign Up button you agree to our    </p>
+ <p ><a href = "terms.html">Terms and Conditions</a> and <a href = "priv.html">Policy Privacy.</a></p><br><br>
+ <p style = "text-align: center; margin-top: 10px; font-size: 13px;">Already have an account? <b><a href = "log-in.html">Login Here.</a></b></p>
+
+
+</form>
+
+</div>
+      </fieldset>
+	  <footer>
+    <div class="container">
+        <div class="About">
+            <h4>About us</h4><br>
+            <p style="color:#C1C1C4; font-size: 12px;">SCHOO! is an e-commerce website dedicated to <br>
+                providing quality school supplies with reasonable<br>
+                prices.</p> <br>
+			<h4> Contact us</h4><br>
+    <img style="width: 12px; margin-right: 5px;" src="http://pluspng.com/img-png/phone-png-phone-png-file-1969.png" alt="Call Logo">
+    <span style="color:#C1C1C4; font-size:12px;">+63 9270050401</span>	<br>	
+	<img style="width: 15px; margin-right: 5px;" src="https://logos-world.net/wp-content/uploads/2020/11/Gmail-Logo-2013-2020.png" alt="gmail Logo">
+    <span style="color:#C1C1C4; font-size:12px;">Cybersecurithree@gmail.com</span>		
+			
+        </div>
+
+        <div class="Services">
+            <h4>Our Services</h4><br>
+            <p style="color:#C1C1C4; font-size: 12px;">School supply management <br>
+                Online transaction processing<br>
+                Local trade <br><br>
+
+                When shopping for school supplies, be sure to <br>
+                compare prices and read customer reviews to <br>
+                ensure you are getting the best deal on high-<br>
+                quality products.</p>
+        </div>
+
+        <div class="Subscribe">
+            <h4>Subscribe us</h4><br>
+            <input type="text" placeholder="Enter your email">
+            <button id="subscribe" class="subscribe">
+                Subscribe
+            </button>
+			
+		
+			<div class="logo">
+				<a href="https://www.facebook.com"><img style="width: 30px; margin: 15px;"
+						src="https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-facebook-circle-512.png"
+						alt="facebook Logo"></a>
+				<a href="https://www.twitter.com"><img style="width: 30px; margin: 15px;"
+						src="https://www.freeiconspng.com/uploads/logo-twitter-circle-png-transparent-image-1.png"
+						alt="twitter Logo"></a>
+				<a href="https://www.instagram.com"><img style="width: 30px; margin: 15px;"
+						src="https://www.montessoriivyleague.com/wp-content/uploads/2018/10/instagram-logo-circle.png"
+						alt="instagram Logo"></a>
+				<a href="https://telegram.org"><img style="width: 30px; margin: 15px;"
+						src="https://pnggrid.com/wp-content/uploads/2021/04/telegram-logo-circle-768x768.png"
+						alt="telegram Logo"></a>
+				<a href="https://www.youtube.com"><img style="width: 30px; margin: 15px;"
+						src="https://pnggrid.com/wp-content/uploads/2021/05/Youtube-Logo-Cicle-1024x1024.png"
+						alt="youtube logo"></a>
+
+			</div>
+
+
+		</div>
+	</div>
+
+	<section>
+		<strong style="margin-left:150px;">&copy; 2023</strong>&nbsp; SCHOO!. &ensp;<b> All rights reserved.</b>
+		<span style="margin-left: auto;">
+			<b style="margin-right:240px;"><a href="priv.html">Privacy policy </a>&ensp; <a href="terms.html">Terms
+					&amp; condition</a></b>
+		</span>
+	</section>
+</footer>
+	  
+
+
+</body>
+</html>
